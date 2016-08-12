@@ -444,7 +444,7 @@ export function Map(context) {
         var t1 = Date.now(),
             t2 = t1 + duration,
             loc1 = map.center(),
-            ease = d3.ease('cubic-in-out');
+            ease = d3.easeCubicInOut;
 
         easing = true;
 
