@@ -1,3 +1,4 @@
+import { functor } from '../../util/index';
 import * as d3 from 'd3';
 import { t } from '../util/locale';
 import _ from 'lodash';
@@ -200,7 +201,7 @@ export function DrawWay(context, wayId, index, mode, baseGraph) {
     // Cancel the draw operation and return to browse, deleting everything drawn.
     drawWay.cancel = function() {
         context.perform(
-            d3.functor(baseGraph),
+            functor(baseGraph),
             t('operations.cancel_draw.annotation'));
 
         window.setTimeout(function() {

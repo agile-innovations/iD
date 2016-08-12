@@ -1,3 +1,4 @@
+import { functor } from '../../util/index';
 import * as d3 from 'd3';
 import { t } from '../util/locale';
 import _ from 'lodash';
@@ -103,7 +104,7 @@ export function Map(context) {
         context.on('enter.map', function() {
             if (map.editable() && !transformed) {
                 var all = context.intersects(map.extent()),
-                    filter = d3.functor(true),
+                    filter = functor(true),
                     graph = context.graph();
 
                 all = context.features().filter(all, graph);
@@ -149,7 +150,7 @@ export function Map(context) {
 
             } else {
                 data = all;
-                filter = d3.functor(true);
+                filter = functor(true);
             }
         }
 

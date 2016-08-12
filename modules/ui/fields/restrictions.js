@@ -1,3 +1,4 @@
+import { functor } from '../../../util/index';
 import * as d3 from 'd3';
 import { t } from '../../util/locale';
 import { Extent, Intersection, RawMercator, Turn, inferRestriction } from '../../geo/index';
@@ -34,7 +35,7 @@ export function restrictions(field, context) {
         var intersection = Intersection(context.graph(), vertexID),
             graph = intersection.graph,
             vertex = graph.entity(vertexID),
-            filter = d3.functor(true),
+            filter = functor(true),
             extent = Extent(),
             projection = RawMercator();
 

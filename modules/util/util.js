@@ -1,3 +1,4 @@
+import { functor } from '../index';
 import * as d3 from 'd3';
 import { t } from './locale';
 import { Detect } from './detect';
@@ -196,7 +197,7 @@ export function wrap(index, length) {
 }
 
 /**
- * a replacement for d3.functor
+ * a replacement for functor
  *
  * @param {*} value any value
  * @returns {Function} a function that returns that value or the value if it's a function

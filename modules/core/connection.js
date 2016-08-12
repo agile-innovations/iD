@@ -1,3 +1,4 @@
+import { functor } from '../../util/index';
 import * as d3 from 'd3';
 import _ from 'lodash';
 import { Detect } from '../util/detect';
@@ -299,7 +300,7 @@ export function Connection(useHttps) {
                         method: 'PUT',
                         path: '/api/0.6/changeset/' + changeset_id + '/close',
                         options: { header: { 'Content-Type': 'text/xml' } }
-                    }, d3.functor(true));
+                    }, functor(true));
                 });
             });
     };

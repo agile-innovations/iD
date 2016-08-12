@@ -1,3 +1,4 @@
+import { functor } from '../../util/index';
 import * as d3 from 'd3';
 import { prefixCSSProperty } from '../util/index';
 export function TileLayer(context) {
@@ -8,7 +9,7 @@ export function TileLayer(context) {
         tileOrigin,
         z,
         transformProp = prefixCSSProperty('Transform'),
-        source = d3.functor('');
+        source = functor('');
 
 
     // blacklist overlay tiles around Null Island..
