@@ -1,4 +1,4 @@
-import { functor } from '../../util/index';
+import { functor } from '../util/index';
 import * as d3 from 'd3';
 import _ from 'lodash';
 import { Detect } from '../util/detect';

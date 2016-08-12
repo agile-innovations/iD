@@ -1,10 +1,9 @@
-import { functor } from '../../util/index';
 import * as d3 from 'd3';
 import { t } from '../util/locale';
 import _ from 'lodash';
 import { Areas, Labels, Layers, Lines, Midpoints, Points, Vertices } from '../svg/index';
 import { Extent, interp } from '../geo/index';
-import { fastMouse, setTransform } from '../util/index';
+import { fastMouse, setTransform, functor } from '../util/index';
 import { flash } from '../ui/index';
 
 export function Map(context) {

@@ -1,3 +1,4 @@
+import { d3keybinding } from '../../js/lib/d3.keybinding.js';
 import * as d3 from 'd3';
 import _ from 'lodash';
 import { tooltip } from '../util/tooltip';
@@ -62,7 +63,7 @@ export function Modes(context) {
                 .classed('mode-' + exited.id, false);
         });
 
-        var keybinding = d3.keybinding('mode-buttons');
+        var keybinding = d3keybinding('mode-buttons');
 
         modes.forEach(function(m) {
             keybinding.on(m.key, function() { if (editable()) context.enter(m); });

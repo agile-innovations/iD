@@ -1,3 +1,4 @@
+import { d3keybinding } from '../../js/lib/d3.keybinding.js';
 import * as d3 from 'd3';
 import { chooseEdge, euclideanDistance } from '../geo/index';
 import { Edit } from './edit';
@@ -7,7 +8,7 @@ import { Tail } from './tail';
 export function Draw(context) {
     var event = d3.dispatch('move', 'click', 'clickWay',
             'clickNode', 'undo', 'cancel', 'finish'),
-        keybinding = d3.keybinding('draw'),
+        keybinding = d3keybinding('draw'),
         hover = Hover(context)
             .altDisables(true)
             .on('hover', context.ui().sidebar.hover),

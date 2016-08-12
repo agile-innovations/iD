@@ -1,3 +1,4 @@
+import { d3keybinding } from '../../js/lib/d3.keybinding.js';
 import * as d3 from 'd3';
 import { Entity } from '../core/index';
 /*
@@ -16,7 +17,7 @@ export function Hover() {
         target;
 
     function keydown() {
-        if (altDisables && d3.event.keyCode === d3.keybinding.modifierCodes.alt) {
+        if (altDisables && d3.event.keyCode === d3keybinding.modifierCodes.alt) {
             dispatch.hover(null);
             selection.selectAll('.hover')
                 .classed('hover-suppressed', true)
@@ -25,7 +26,7 @@ export function Hover() {
     }
 
     function keyup() {
-        if (altDisables && d3.event.keyCode === d3.keybinding.modifierCodes.alt) {
+        if (altDisables && d3.event.keyCode === d3keybinding.modifierCodes.alt) {
             dispatch.hover(target ? target.id : null);
             selection.selectAll('.hover-suppressed')
                 .classed('hover-suppressed', false)

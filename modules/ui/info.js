@@ -1,3 +1,4 @@
+import { d3keybinding } from '../../js/lib/d3.keybinding.js';
 import * as d3 from 'd3';
 import { t } from '../util/locale';
 import _ from 'lodash';
@@ -227,7 +228,7 @@ export function Info(context) {
 
         redraw();
 
-        var keybinding = d3.keybinding('info')
+        var keybinding = d3keybinding('info')
             .on(key, toggle);
 
         d3.select(document)

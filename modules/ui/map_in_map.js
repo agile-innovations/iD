@@ -1,3 +1,4 @@
+import { d3keybinding } from '../../js/lib/d3.keybinding.js';
 import * as d3 from 'd3';
 import { Debug, Gpx } from '../svg/index';
 import { RawMercator } from '../geo/index';
@@ -295,7 +296,7 @@ export function MapInMap(context) {
 
         redraw();
 
-        var keybinding = d3.keybinding('map-in-map')
+        var keybinding = d3keybinding('map-in-map')
             .on(key, toggle);
 
         d3.select(document)

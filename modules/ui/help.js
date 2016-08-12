@@ -1,3 +1,4 @@
+import { d3keybinding } from '../../js/lib/d3.keybinding.js';
 import * as d3 from 'd3';
 import { t } from '../util/locale';
 import { tooltip } from '../util/tooltip';
@@ -148,7 +149,7 @@ export function Help(context) {
 
         clickHelp(docs[0], 0);
 
-        var keybinding = d3.keybinding('help')
+        var keybinding = d3keybinding('help')
             .on(key, toggle)
             .on('B', hide)
             .on('F', hide);

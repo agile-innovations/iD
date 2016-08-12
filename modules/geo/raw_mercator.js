@@ -6,7 +6,7 @@ import * as d3 from 'd3';
     * Resampling
 */
 export function RawMercator() {
-    var project = d3.geo.mercator.raw,
+    var project = d3.geoMercator.raw,
         k = 512 / Math.PI, // scale
         x = 0, y = 0, // translate
         clipExtent = [[0, 0], [0, 0]];

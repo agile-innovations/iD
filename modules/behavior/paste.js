@@ -1,3 +1,4 @@
+import { d3keybinding } from '../../js/lib/d3.keybinding.js';
 import * as d3 from 'd3';
 import _ from 'lodash';
 import { ChangeTags, CopyEntities, Move as MoveAction} from '../actions/index';
@@ -6,7 +7,7 @@ import { Move as MoveMode } from '../modes/index';
 import { cmd } from '../ui/index';
 
 export function Paste(context) {
-    var keybinding = d3.keybinding('paste');
+    var keybinding = d3keybinding('paste');
 
     function omitTag(v, k) {
         return (

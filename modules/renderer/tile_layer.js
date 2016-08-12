@@ -1,6 +1,5 @@
-import { functor } from '../../util/index';
 import * as d3 from 'd3';
-import { prefixCSSProperty } from '../util/index';
+import { prefixCSSProperty, functor } from '../util/index';
 export function TileLayer(context) {
     var tileSize = 256,
         tile = d3.geo.tile(),
