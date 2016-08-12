@@ -1,3 +1,4 @@
+import { d3combobox } from '../../js/lib/d3.combobox.js';
 import * as d3 from 'd3';
 import { t } from '../util/locale';
 import _ from 'lodash';
@@ -178,7 +179,7 @@ export function RawMembershipEditor(context) {
                 $enter.append('input')
                     .attr('type', 'text')
                     .attr('class', 'member-entity-input')
-                    .call(d3.combobox()
+                    .call(d3combobox()
                         .minItems(1)
                         .fetcher(function(value, callback) {
                             callback(relations(value));
@@ -237,7 +238,7 @@ export function RawMembershipEditor(context) {
                     return sameletter.concat(other);
                 }
     
-                role.call(d3.combobox()
+                role.call(d3combobox()
                     .fetcher(function(role, callback) {
                         var rtype = d.relation.tags.type;
                         context.taginfo().roles({
@@ -255,7 +256,7 @@ export function RawMembershipEditor(context) {
                 var row = d3.select(this);
     
                 row.selectAll('input.member-role')
-                    .call(d3.combobox.off);
+                    .call(d3combobox.off);
             }
         }
     }

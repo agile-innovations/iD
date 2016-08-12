@@ -1,3 +1,4 @@
+import { d3combobox } from '../../js/lib/d3.combobox.js';
 import * as d3 from 'd3';
 import { t } from '../util/locale';
 import { Disclosure } from './disclosure';
@@ -150,7 +151,7 @@ export function RawTagEditor(context) {
                 return sameletter.concat(other);
             }
 
-            key.call(d3.combobox()
+            key.call(d3combobox()
                 .fetcher(function(value, callback) {
                     context.taginfo().keys({
                         debounce: true,
@@ -161,7 +162,7 @@ export function RawTagEditor(context) {
                     });
                 }));
 
-            value.call(d3.combobox()
+            value.call(d3combobox()
                 .fetcher(function(value, callback) {
                     context.taginfo().values({
                         debounce: true,
@@ -178,10 +179,10 @@ export function RawTagEditor(context) {
             var row = d3.select(this);
 
             row.selectAll('input.key')
-                .call(d3.combobox.off);
+                .call(d3combobox.off);
 
             row.selectAll('input.value')
-                .call(d3.combobox.off);
+                .call(d3combobox.off);
         }
 
         function keyChange(d) {

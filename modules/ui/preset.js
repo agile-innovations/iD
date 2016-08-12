@@ -1,3 +1,4 @@
+import { d3combobox } from '../../js/lib/d3.combobox.js';
 import * as d3 from 'd3';
 import { t } from '../util/locale';
 import _ from 'lodash';
@@ -215,7 +216,7 @@ export function preset(context) {
                 }
                 return placeholder.slice(0,3).join(', ') + ((placeholder.length > 3) ? '…' : '');
             })
-            .call(d3.combobox().data(notShown)
+            .call(d3combobox().data(notShown)
                 .minItems(1)
                 .on('accept', show));
 

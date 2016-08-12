@@ -1,3 +1,4 @@
+import { d3combobox } from '../../js/lib/d3.combobox.js';
 import * as d3 from 'd3';
 import { t } from '../util/locale';
 import { Browse, Select } from '../modes/index';
@@ -139,7 +140,7 @@ export function RawMemberEditor(context) {
                     return sameletter.concat(other);
                 }
     
-                role.call(d3.combobox()
+                role.call(d3combobox()
                     .fetcher(function(role, callback) {
                         var rtype = entity.tags.type;
                         context.taginfo().roles({
@@ -157,7 +158,7 @@ export function RawMemberEditor(context) {
                 var row = d3.select(this);
     
                 row.selectAll('input.member-role')
-                    .call(d3.combobox.off);
+                    .call(d3combobox.off);
             }
         }
     }
