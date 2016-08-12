@@ -1,4 +1,5 @@
 import { functor } from '../util/index';
+import { d3geoTile } from '../../js/lib/d3.geo.tile';
 import * as d3 from 'd3';
 import _ from 'lodash';
 import { Detect } from '../util/detect';
@@ -380,7 +381,7 @@ export function Connection(useHttps) {
                 s / 2 - projection.translate()[0],
                 s / 2 - projection.translate()[1]];
 
-        var tiles = d3.geo.tile()
+        var tiles = d3geoTile()
             .scaleExtent([tileZoom, tileZoom])
             .scale(s)
             .size(dimensions)
