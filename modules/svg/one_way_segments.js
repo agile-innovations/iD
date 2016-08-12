@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { euclideanDistance } from '../geo/index';
 
 export function OneWaySegments(projection, graph, dt) {

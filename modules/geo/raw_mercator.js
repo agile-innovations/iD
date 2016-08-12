@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 /*
     Bypasses features of D3's default projection stream pipeline that are unnecessary:
     * Antimeridian clipping

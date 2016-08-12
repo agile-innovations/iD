@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 /* global Mapillary:false */
 import _ from 'lodash';
 import { Detect } from '../util/detect';

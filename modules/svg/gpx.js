@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import _ from 'lodash';
 import { Extent, polygonIntersectsPolygon } from '../geo/index';
 import { Detect } from '../util/detect';

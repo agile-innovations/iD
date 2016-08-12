@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { Icon } from '../svg/index';
 import { featureIcons } from '../../data/index';
 

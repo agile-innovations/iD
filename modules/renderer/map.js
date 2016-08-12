@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { t } from '../util/locale';
 import _ from 'lodash';
 import { Areas, Labels, Layers, Lines, Midpoints, Points, Vertices } from '../svg/index';
@@ -459,10 +460,11 @@ export function Map(context) {
             var locNow = interp(loc1, loc2, ease((tNow - t1) / duration));
             setCenter(locNow);
 
-            d3.event = {
-                scale: zoom.scale(),
-                translate: zoom.translate()
-            };
+            // TODO: fix
+            // d3.event = {
+            //     scale: zoom.scale(),
+            //     translate: zoom.translate()
+            // };
 
             zoomPan();
             return !easing;

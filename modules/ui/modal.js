@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { Icon } from '../svg/index';
 export function modal(selection, blocking) {
     var keybinding = d3.keybinding('modal');

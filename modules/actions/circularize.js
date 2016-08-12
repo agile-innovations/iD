@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { euclideanDistance, interp } from '../geo/index';
 import { Node } from '../core/index';
 import _ from 'lodash';

@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 export function cycleway(field) {
     var dispatch = d3.dispatch('change'),
         items;

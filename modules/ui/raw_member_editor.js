@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { t } from '../util/locale';
 import { Browse, Select } from '../modes/index';
 import { ChangeMember, DeleteMember } from '../actions/index';

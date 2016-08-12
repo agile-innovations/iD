@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { chooseEdge, euclideanDistance } from '../geo/index';
 import { Edit } from './edit';
 import { Hover } from './hover';

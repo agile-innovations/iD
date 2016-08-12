@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { cmd } from './cmd';
 
 export function FullScreen(context) {

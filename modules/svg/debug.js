@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { polygonIntersectsPolygon } from '../geo/index';
 import {
     imperial as imperialData,

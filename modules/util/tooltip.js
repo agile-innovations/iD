@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 export function tooltip() {
 
   var tooltip = function(selection) {

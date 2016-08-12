@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { t } from '../../util/locale';
 import { Entity, Graph } from '../../core/index';
 import { Browse } from '../../modes/index';

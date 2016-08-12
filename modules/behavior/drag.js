@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { prefixCSSProperty, prefixDOMProperty } from '../util/index';
 /*
     `iD.behavior.drag` is like `d3.behavior.drag`, with the following differences:
@@ -31,11 +32,12 @@ export function drag() {
       return function(e1) {
         var e0 = e1.sourceEvent = d3.event;
         e1.target = drag;
-        d3.event = e1;
+        // TODO
+        // d3.event = e1;
         try {
           event[e1.type].apply(thiz, argumentz);
         } finally {
-          d3.event = e0;
+          // d3.event = e0;
         }
       };
     };

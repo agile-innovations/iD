@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import _ from 'lodash';
 import { ChangeTags, CopyEntities, Move as MoveAction} from '../actions/index';
 import { Extent, pointInPolygon } from '../geo/index';

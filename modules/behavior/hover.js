@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { Entity } from '../core/index';
 /*
    The hover behavior adds the `.hover` class on mouseover to all elements to which

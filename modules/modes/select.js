@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { t } from '../util/locale';
 import _ from 'lodash';
 import * as Operations from '../operations/index';
